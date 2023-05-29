@@ -4,7 +4,7 @@ This is a single-page resume tailored towards outgoing students. The template ha
 
 ## Preview
 
-![](images/resume.jpg)
+![](images/resume.png)
 
 ## Getting Started
 
