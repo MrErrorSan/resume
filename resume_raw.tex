@@ -1,0 +1,169 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\pdfgentounicode=1
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/muhammad-saad-shafiq-a93201240/}{\Large Muhammad Saad Shafiq}} 
+  & \href{https://github.com/MrErrorSan}{github.com/MrErrorSan}\\
+  & \href{mailto:muhammadsaadshafiq275@gmail.com}{muhammadsaadshafiq275@gmail.com}\\
+  {} & +92-316-7107392 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National University of Computer and Emerging Sciences}{Lahore, Pakistan}
+      {Bachelor of Science in Computer Science}{Aug. 2019 -- June. 2023}
+      \resumeItemListStart
+        \resumeItem{Courses}
+        {Web Programming, Mobile Development, Software Testing, Artificial Intelligence, Game Design and Development, Web Scraping, Linux, Natural Language Processing, Advance Database Concepts, Digital Image Processing}
+        \resumeItem{Activities}
+            {FYP Exhibition in Job Fair 23, Software Project Competition(SPC) Competition in Softec23}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    
+    \resumeSubheading
+      {Research Assistant - FAST-NUCES}{Lahore, PK}
+      {Research Intern, Dr. Ali Afzal}{June 2022 - July 2023}
+      \resumeItemListStart
+        \resumeItem {Emergency Expert | FYP}
+        {Developed "Emergency Expert," a tool to guide people in critical health situations by providing diagnostics, suggesting optimal hospitals, bed and token management system, integrated pharmacy services, and doctor appointments for comprehensive healthcare. Utilized Android Studio with Java for mobile app and React for web app development.}
+        
+      \resumeItemListEnd
+
+       \resumeSubheading
+      {Flutter/Android Developer and Automation developer - Fiverr/Upwork}{Freelance}
+      { }{{2022 - Feb 2023}}
+      \resumeItemListStart
+        \resumeItem {Flutter/Android Developer}
+        {Developed mobile apps using common Architecture Styles like MVC, MVP, and MVVM, focusing on Design patterns and principles.}
+        \resumeItem {Automation Developer}
+        {Specialized in automation development and web scraping. Developed custom automation scripts for data extraction, analysis, and visualization using Python, requests, Selenium, and BeautifulSoup. Worked on web scraping projects for competitor analysis, price monitoring, and data collection using Python libraries and frameworks.}
+        
+      \resumeItemListEnd
+  
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Airline Ticket Booking System}
+{Developed an ASP.NET web application allowing users to purchase tickets online. Implemented in HTML, CSS, JavaScript, C\#, and MySQL.}
+\resumeSubItem{FAST Chat App}
+{Created a Java-based Android app facilitating communication between students and teachers, providing answers to basic student queries.}
+\resumeSubItem{Token System App}
+{Designed a Flutter-based app for managing waiting times at various platforms for tasks, offering online token registration and activity reports for owners.}
+\resumeSubItem{Inventory Chat Bot}
+{Utilized NLP techniques to develop a chatbot for inventory management, enhancing business processes. Implemented in Python using NLTK, T5 encoder-decoder model, and other libraries.}
+\resumeSubItem{Lossless Image Compression and Decompression}
+{Implemented image compression and decompression algorithms using RLC, Huffman, DCT, ZigZag, and custom-Tkinter in Python. Achieved solid GUI support with a compression ratio of up to 5:1.}
+\resumeSubItem{Pixel Adventure Game}
+{Developed a Unity-based platform game incorporating puzzle-solving elements while navigating and battling enemies.}
+\resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+    \resumeSubItem {Languages}
+    {Python, C, C++, C-Sharp, Java, Kotlin, Dart, MySQL, JavaScript}
+    \resumeSubItem {Technologies}
+    {Unity, PyTorch, Android Studio, Flutter, Tensorflow, Matplotlib, TKinter, Pandas, NumPy, Selenium, Night-Watch, BeautifulSoup4, Flask, Docker, GCP, BigData, HTML, CSS, MongoDB, and MySQL}
+ \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
