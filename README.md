@@ -21,6 +21,5 @@ To get started, follow the below listed steps.
 ## Credits & License
 
 Adapted from: [Sourabh Bajaj's Repository](https://github.com/sb2nov/resume).
-Cloned from: [Saqib Ali's Repository](https://github.com/SaqibAMA/resume).
 
 License information is provided in original repository.
