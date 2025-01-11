@@ -1,24 +1,23 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{multicol}
 \input{glyphtounicode}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -26,192 +25,121 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
+\setlength{\tabcolsep}{0in}
+\setlength{\columnsep}{1cm}
 
 \raggedbottom
 \raggedright
-\setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\huge
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+% Section formatting
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2}
   }
-}
-
-% Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#3} & \textit{\small#4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
-\pdfgentounicode=1
-
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
+\newcommand{\resumeProject}[2]{
+  \item\small{
+    \textbf{#1}{: #2}
+  }
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSkills}[2]{
+  \item\small{
+    \textbf{#1:} #2
+  }
+}
 
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+% Resume starts here
 \begin{document}
 
-
-%----------HEADING-----------------
+% Header
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://www.linkedin.com/in/muhammad-saad-shafiq-a93201240/}{\Large Muhammad Saad Shafiq}} 
-  & \href{https://github.com/MrErrorSan}{github.com/MrErrorSan}\\
-  & \href{mailto:muhammadsaadshafiq275@gmail.com}{muhammadsaadshafiq275@gmail.com}\\
-  {} & +923167107392 \\ 
+  \textbf{\Large Muhammad Saad Shafiq} & \href{mailto:muhammadsaadshafiq275@gmail.com}{muhammadsaadshafiq275@gmail.com} \\
+  \href{https://www.linkedin.com/in/muhammad-saad-shafiq-a93201240/}{linkedin.com/in/muhammad-saad-shafiq} & +92-316-7107392 \\
+  \href{https://github.com/MrErrorSan}{github.com/MrErrorSan} & Lahore, Pakistan \\
 \end{tabular*}
 
-%-----------EDUCATION-----------------
+% Objective
+\section{Professional Summary}
+Experienced Flutter Developer specializing in cross-platform mobile application development with expertise in Clean Architecture, state management (Provider, BLoC, GetX), and backend integrations. Proficient in designing scalable, maintainable applications with dynamic, user-friendly UIs and seamless localization. Passionate about delivering impactful solutions and driving user engagement through innovative app design.
+
+% Education
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {National University of Computer and Emerging Sciences}{Lahore, Pakistan}
-      {Bachelor of Science in Computer Science}{Aug. 2019 -- June 2023}
-      \resumeItemListStart
-        \resumeItem{Courses}
-        {Web Programming, Mobile Development, Software Testing, Artificial Intelligence, Game Design and Development, Web Scraping, Linux, Natural Language Processing, Advance Database Concepts, Digital Image Processing}
-        \resumeItem{Activities}
-        {FYP Exhibition in Job Fair 23, Software Project Competition(SPC) in Softec23}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-  
-%-----------Experience-----------------
+\resumeSubheading
+{National University of Computer and Emerging Sciences}{Lahore, Pakistan}
+{Bachelor of Science in Computer Science}{Aug 2019 -- June 2023}
+\begin{itemize}[leftmargin=*]
+  \item Relevant Courses: Mobile Development, Software Testing, Artificial Intelligence, Game Development, Linux, Advanced Database Concepts.
+  \item Activities: FYP showcased in Ignite 2024; Participant in Softec23 FYP competition.
+\end{itemize}
 
-\section{Experience}
-
-\resumeSubHeadingListStart
+% Experience
+\section{Professional Experience}
+\resumeSubheading
+{Flutter Developer | Freelance Projects}{Remote}
+{}{Aug 2023 -- Present}
+\begin{itemize}[leftmargin=*]
+  \item Developed and optimized Flutter applications for various clients using Clean Architecture and state management patterns (BLoC, Provider).
+  \item Integrated Firebase and REST APIs to implement real-time updates and secure user authentication.
+  \item Designed and deployed responsive UIs tailored for localization and device-specific optimization (e.g., Pixel Tablet).
+  \item Delivered a Flutter-based emergency support app with a 40\% improvement in response efficiency.
+\end{itemize}
 
 \resumeSubheading
-{Research Assistant - FAST-NUCES}{Lahore, PK}
-{Research Intern, Dr. Ali Afzal}{June 2022 - July 2023}
-\resumeItemListStart
-  \resumeItem {Emergency Expert | FYP}
-  {Developed "Emergency Expert," a comprehensive healthcare tool. The project included a mobile app developed with Android Studio using Java and a web app built with React. Implemented diagnostics, optimal hospital suggestions, bed and token management, integrated pharmacy services, and doctor appointments for holistic healthcare solutions.}
-  \resumeItem {\href{https://ignite.org.pk/}{Ignite National Technology Fund Short Listed | NGIRI 2023-24}}
-  {Selected as the sole project from among 100 final year projects submitted this year by FAST-NUCES Lahore.}
-\resumeItemListEnd
+{Data Scientist | LTVCO}{San Francisco, USA}
+{Web Scraping and Automation Development}{July 2023 -- Feb 2024}
+\begin{itemize}[leftmargin=*]
+  \item Automated retail data extraction using Python web scraping libraries (BeautifulSoup, Scrapy).
+  \item Deployed scripts to GCP and AWS, streamlining data ingestion pipelines by 30\%.
+  \item Conducted competitor analysis and price monitoring to inform strategic decision-making.
+\end{itemize}
 
 \resumeSubheading
-{Flutter/Android Development}{Freelance/FYP}
-{}{}
-\resumeItemListStart
-\resumeItem{Custom Design and Backend Implementation}
-{Specialized in designing custom interfaces and implementing backend functionalities for mobile apps using Flutter and Android. Developed backend solutions with APIs to support app functionality and data management.}
+{Software Engineer | New Elevation}{Lahore, Pakistan}
+{Technical Support and SQL Management}{Feb 2024 -- Apr 2024}
+\begin{itemize}[leftmargin=*]
+  \item Provided technical support and maintained software systems for optimal performance.
+  \item Conducted staging environment testing and resolved critical deployment issues.
+\end{itemize}
 
-\resumeItem{Architecture Patterns and Live Data Implementation}
-{Proficient in employing common architecture patterns like MVC, MVP, and MVVM for scalable and maintainable app development. Implemented live data features and WebSocket listening to provide real-time updates and interactions within apps.}
+% Projects
+\section{Key Projects}
+\begin{itemize}[leftmargin=*]
+  \resumeProject{Miles Mobile}
+  {Live data display app for highway toll systems using Flutter and WebSockets (Feathers.js).}
+  \resumeProject{Kfar}
+  {Community-based app with social interactions and event management. Implemented localization and real-time updates.}
+  \resumeProject{AlQaswa EMS \& HMS}
+  {Expense management and tenant registration apps for hostel management. Delivered enhanced tracking and user engagement.}
+  \resumeProject{Scents Ability Match Game}
+  {Memory-strengthening mobile game for children, developed in Flutter. Published with ad monetization.}
+  \resumeProject{Schoollet}
+  {Developed user and canteen apps for a client in Saudi Arabia using Flutter. Published live on the Play Store with full localization support for Arabic and English.}
+\end{itemize}
 
-\resumeItem{Emergency Expert (FYP)}
-{Designed and developed a Health Decision Support application as part of my Final Year Project (FYP) using Android Studio and Java stack. The application aimed to assist users in making guided decisions regarding their health in emergencies.}
+% Skills
+\section{Skills}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=*]
+  \resumeSkills{Languages}{Dart, Python, Java, Kotlin, JavaScript, SQL}
+  \resumeSkills{Mobile Development}{Flutter, Android Studio, REST APIs, Firebase, SQLite}
+  \resumeSkills{State Management}{BLoC, Provider, Riverpod}
+  \resumeSkills{Tools \& Technologies}{Docker, GCP, AWS, Selenium}
+  \resumeSkills{Architecture Patterns}{Clean Architecture, MVC, MVP, MVVM}
+  \resumeSkills{Localization}{i18n, RTL support, adaptive layouts}
+\end{itemize}
+\end{multicols}
 
-\resumeItem{Integration of Backend Technologies}
-{Integrated various backend technologies such as REST APIs, Firebase database, MongoDB, and SQLite to implement robust functionalities and ensure seamless app performance.}
-
-\resumeItem{User-friendly Interfaces}
-{Skilled in creating visually appealing and user-friendly interfaces to enhance user experience and engagement. Implemented intuitive navigation and interactive elements for enhanced usability.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Data Scientist | LTVCO}{Francisco, USA}
-{Web Scraping, Automation Development, and GCP Management}{July 2023 - February 2024}
-\resumeItemListStart
-\resumeItem{Web Scraping and Automation Development}
-{Developed automated web scraping Python scripts for multiple websites to extract retail data efficiently. Successfully implemented techniques to bypass security measures for seamless data extraction.}
-
-\resumeItem{Script Deployment and Data Routing}
-{Deployed automation scripts on servers to ensure continuous data extraction. Implemented data routing mechanisms to send extracted data to either GCP BigQuery or AWS for further processing and utilization.}
-
-\resumeItem{GCP Management}
-{Managed GCP (Google Cloud Platform) infrastructure, including setup, configuration, and maintenance. Ensured optimal performance and scalability of GCP resources to support data processing and analysis tasks.}
-
-\resumeItem{Data Processing and Analysis}
-{Performed data processing and analysis tasks on extracted retail data to derive valuable insights. Utilized Python libraries for data manipulation, analysis, and visualization to support decision-making processes.}
-
-\resumeItem{Competitor Analysis and Price Monitoring}
-{Executed large-scale industry projects involving competitor analysis and price monitoring using the extracted data. Provided actionable insights to stakeholders for strategic decision-making.}
-\resumeItemListEnd
-
-\resumeSubheading
-{Software Engineer | New Elevation}{Lahore, PAK}
-{Technical Support, Software Maintenance, and Data Extraction}{February 2024 - April 2024}
-\resumeItemListStart
-\resumeItem{Technical Support and Maintenance}
-{Provided comprehensive technical support and conducted regular maintenance on software systems to ensure optimal performance and user satisfaction. Utilized troubleshooting skills to address user inquiries, resolve issues promptly, and enhance software functionality.}
-
-\resumeItem{Data Extraction from SQL Databases}
-{Extracted data from SQL databases to fulfill user requirements and support decision-making processes. Utilized SQL querying techniques to retrieve specific data sets and formatted the data for user consumption.}
-
-\resumeItem{ATG Deployment and Error Fixing}
-{Played a key role in ATG deployment processes, ensuring smooth implementation and minimal disruption to services. Proactively identified and resolved errors to maintain system integrity and user experience.}
-
-\resumeItem{Staging Environment Testing}
-{Conducted thorough testing in staging environments to validate software updates, configurations, and fixes before deployment to production. Collaborated with development teams to identify potential issues and ensure seamless transitions between environments.}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------------
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeSubItem{Airline Ticket Booking System}
-{Developed an ASP.NET web application allowing users to purchase tickets online. Implemented in HTML, CSS, JavaScript, C\#, and MySQL. The system provided a user-friendly interface for booking, cancellations, and viewing flight details.}
-\resumeSubItem{FAST Chat App}
-{Created a Java-based Android app facilitating communication between students and teachers. Implemented features for Q\&A sessions, announcements, and resource sharing, enhancing communication within the academic community.}
-\resumeSubItem{Token System App}
-{Designed a Flutter-based app for managing waiting times at various platforms for tasks. The app offered online token registration and activity reports for owners, streamlining processes in busy environments.}
-\resumeSubItem{Scents Ability Match Game}
-{Designed a Flutter-based app for managing waiting times at various platforms for tasks. The game is developed for the children to help them strengthen their memory in a engaging way. This app also include banner ads and full screen ads and uploaded on google play store.}
-\resumeSubItem{Inventory Chat Bot}
-{Utilized N.L.P. techniques to develop a chat bot for inventory management. The bot facilitated tasks such as product search, order status updates, and restocking notifications. Implemented in Python using NLTK, T5 encoder-decoder model, and other libraries.}
-\resumeSubItem{Lossless Image Compression and Decompression}
-{Implemented image compression and decompression algorithms using RLC, Huffman, DCT, ZigZag, and custom-Tkinter in Python. Achieved solid GUI support with a compression ratio of up to 5:1. The tool provided a user-friendly interface for image compression and decompression tasks.}
-\resumeSubItem{Pixel Adventure Game}
-{Developed a Unity-based platform game incorporating puzzle-solving elements. The game featured engaging levels, interactive environments, and challenging enemies, providing an immersive gaming experience.}
-\resumeSubHeadingListEnd
-
-%
-%--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
- \resumeSubHeadingListStart
-    \resumeSubItem {Languages}
-    {Python, C, C++, C-Sharp, Java, Kotlin, Dart, MySQL, JavaScript}
-    \resumeSubItem {Technologies}
-    {Android Studio, Flutter, Tensorflow, Matplotlib, TKinter, Pandas, NumPy, Selenium, Night-Watch, BeautifulSoup4, Scrapy, Flask, Docker, GCP, AWS, BigData, Unity, Linux, HTML, CSS, MongoDB, and SQL/MySQL}
- \resumeSubHeadingListEnd
-
-%-------------------------------------------
 \end{document}
