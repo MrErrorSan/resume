@@ -1,18 +1,17 @@
 \documentclass[a4paper,10pt]{article}
 
-\usepackage{latexsym}
+% Essential packages
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{tabularx}
-\usepackage{fontawesome}
-\usepackage{multicol}
 \input{glyphtounicode}
+\usepackage{fontawesome5}
 
+% Page layout
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
@@ -21,125 +20,126 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
 \setlength{\tabcolsep}{0in}
-\setlength{\columnsep}{1cm}
+\setlength{\columnsep}{0.5cm}
 
 \raggedbottom
 \raggedright
 
 % Section formatting
-\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+\titleformat{\section}{\scshape\large\raggedright}{}{0em}{}[\color{black}\titlerule]
 
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2}
-  }
+  \item\small{\textbf{#1}{: #2}}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small#4} \\
-    \end{tabular*}\vspace{-5pt}
+  % \vspace{0pt}
+  \item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabular*}
+  % \vspace{0pt}
 }
 
-\newcommand{\resumeProject}[2]{
-  \item\small{
-    \textbf{#1}{: #2}
-  }
+% Projects: Title unbulleted, description bulleted
+\newcommand{\resumeProject}[2]{%
+  % First, an unbulleted item for the title:
+  \item[]\small{%
+    \textbf{#1}\\[-0.2em]%
+    % Then a nested itemize with a single bullet for the description:
+    \begin{itemize}[leftmargin=*, label={\textbullet}, topsep=3pt, partopsep=3pt]
+      \item #2
+    \end{itemize}%
+  }%
 }
 
-\newcommand{\resumeSkills}[2]{
-  \item\small{
-    \textbf{#1:} #2
-  }
-}
-
-% Resume starts here
+% Document begins here
 \begin{document}
 
 % Header
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Muhammad Saad Shafiq} & \href{mailto:muhammadsaadshafiq275@gmail.com}{muhammadsaadshafiq275@gmail.com} \\
-  \href{https://www.linkedin.com/in/muhammad-saad-shafiq-a93201240/}{linkedin.com/in/muhammad-saad-shafiq} & +92-316-7107392 \\
-  \href{https://github.com/MrErrorSan}{github.com/MrErrorSan} & Lahore, Pakistan \\
+  \textbf{\Large Muhammad Saad Shafiq} & 
+  \faEnvelope[regular]\ \href{mailto:dev.saadshafiq@gmail.com}{dev.saadshafiq@gmail.com} \\
+  \faLinkedin\ \href{https://linkedin.com/in/dev-saad-shafiq/}{linkedin.com/in/dev-saad-shafiq} & 
+  \faIcon{mobile-alt}\ \href{tel:+923167107392} {+92-3167107392} \\
+  \faGithub\ \href{https://github.com/MrErrorSan}{github.com/MrErrorSan} & 
+  \faMapMarker*\ Lahore, Pakistan \\
 \end{tabular*}
 
-% Objective
+% Professional Summary
 \section{Professional Summary}
-Experienced Flutter Developer specializing in cross-platform mobile application development with expertise in Clean Architecture, state management (Provider, BLoC, GetX), and backend integrations. Proficient in designing scalable, maintainable applications with dynamic, user-friendly UIs and seamless localization. Passionate about delivering impactful solutions and driving user engagement through innovative app design.
+Accomplished Flutter Developer and Software Engineer with a strong background in developing cross-platform mobile applications, utilizing Clean Architecture and scalable state management solutions. Demonstrated proficiency in integrating back-end services, implementing CI/CD pipelines, and deploying applications on cloud platforms. Skilled in creating localized, responsive user interfaces and optimizing app performance for high-traffic environments. Committed to adopting the latest Flutter advancements and DevOps methodologies to deliver robust, user-centric solutions.
 
-% Education
-\section{Education}
-\resumeSubheading
-{National University of Computer and Emerging Sciences}{Lahore, Pakistan}
-{Bachelor of Science in Computer Science}{Aug 2019 -- June 2023}
-\begin{itemize}[leftmargin=*]
-  \item Relevant Courses: Mobile Development, Software Testing, Artificial Intelligence, Game Development, Linux, Advanced Database Concepts.
-  \item Activities: FYP showcased in Ignite 2024; Participant in Softec23 FYP competition.
+% Skills
+\section{Skills}
+\begin{itemize}[leftmargin=*,label={}]
+  \item \textbf{Frontend:} Flutter, Dart, Android (Java/Kotlin), Jetpack Compose, Figma, i18n/RTL
+  \item \textbf{Backend:} Node.js, Python, REST/GraphQL, Firebase Functions, Shell Scripting
+  \item \textbf{Databases:} PostgreSQL, MySQL, SQLite, Hive, Firebase Realtime Database, AWS RDS
+  \item \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda), GCP, Docker, GitHub Actions, CI/CD Pipelines
+  \item \textbf{Project Management:} Agile/Scrum, Jira, Confluence, Roadmaps, Stakeholder Communication
+  \item \textbf{Tools \& QA:} Git, Selenium, Mockito, mocktail, Golden Tests, Android Studio, VS Code
 \end{itemize}
 
 % Experience
 \section{Professional Experience}
+
 \resumeSubheading
-{Flutter Developer | Freelance Projects}{Remote}
-{}{Aug 2023 -- Present}
+{Full Stack Mobile App Developer}{Lahore, Pakistan}
+{Zentech Solutions}{2023–Present}
 \begin{itemize}[leftmargin=*]
-  \item Developed and optimized Flutter applications for various clients using Clean Architecture and state management patterns (BLoC, Provider).
-  \item Integrated Firebase and REST APIs to implement real-time updates and secure user authentication.
-  \item Designed and deployed responsive UIs tailored for localization and device-specific optimization (e.g., Pixel Tablet).
-  \item Delivered a Flutter-based emergency support app with a 40\% improvement in response efficiency.
+  \item Built and delivered 10+ cross-platform Flutter applications for diverse clients, utilizing Provider, Cubit, Clean Architecture, and very\_good\_cli templates to ensure scalable and maintainable codebases.
+  \item Developed and deployed 25+ automated web scraping scripts using Python (requests, aiohttp, Selenium, BeautifulSoup), hosted on GCP and AWS to streamline client data acquisition and analysis.
+  \item Integrated REST APIs, Firebase, and GraphQL backends to enable real-time updates, secure authentication, and dynamic content delivery.
+  \item Designed responsive, localized UIs with device-specific optimization, enhancing user retention and multi-device user experiences.
+  \item Migrated legacy Android apps to Flutter, significantly improving performance, UI consistency, and user engagement across platforms.
+  \item Conducted golden tests, unit tests, and widget/UI tests to ensure robust code quality, high test coverage, and stable production releases.
+  \item Led DevOps activities, including CI/CD automation with GitHub Actions, GCP server setup, cloud deployments, and DNS/domain management for web and mobile ecosystems.
+  \item Collaborated with cross-functional teams (backend engineers, frontend developers, QA testers) to ensure seamless agile project deliveries aligned with client and stakeholder requirements.
 \end{itemize}
 
 \resumeSubheading
-{Data Scientist | LTVCO}{San Francisco, USA}
-{Web Scraping and Automation Development}{July 2023 -- Feb 2024}
+{Software Engineer}{Lahore, Pakistan}
+{New Elevation}{February 2023 - July 2023}
 \begin{itemize}[leftmargin=*]
-  \item Automated retail data extraction using Python web scraping libraries (BeautifulSoup, Scrapy).
-  \item Deployed scripts to GCP and AWS, streamlining data ingestion pipelines by 30\%.
-  \item Conducted competitor analysis and price monitoring to inform strategic decision-making.
+  \item Provided technical support for an Oracle ATG-based e-commerce platform, diagnosing backend log errors and correcting file formatting to ensure seamless data ingestion for sellers.
+  \item Mitigated deployment conflicts during system updates, maintaining smooth transaction flows and minimizing downtime for sellers.
+  \item Audited database deletion requests, verifying record integrity by cloning production environments to staging and preventing critical data loss.
+  \item Developed and executed advanced SQL queries to extract, analyze, and deliver requested datasets, enhancing operational reporting and seller platform support.
 \end{itemize}
 
-\resumeSubheading
-{Software Engineer | New Elevation}{Lahore, Pakistan}
-{Technical Support and SQL Management}{Feb 2024 -- Apr 2024}
-\begin{itemize}[leftmargin=*]
-  \item Provided technical support and maintained software systems for optimal performance.
-  \item Conducted staging environment testing and resolved critical deployment issues.
-\end{itemize}
 
 % Projects
 \section{Key Projects}
 \begin{itemize}[leftmargin=*]
-  \resumeProject{Miles Mobile}
-  {Live data display app for highway toll systems using Flutter and WebSockets (Feathers.js).}
-  \resumeProject{Kfar}
-  {Community-based app with social interactions and event management. Implemented localization and real-time updates.}
-  \resumeProject{AlQaswa EMS \& HMS}
-  {Expense management and tenant registration apps for hostel management. Delivered enhanced tracking and user engagement.}
-  \resumeProject{Scents Ability Match Game}
-  {Memory-strengthening mobile game for children, developed in Flutter. Published with ad monetization.}
+
+  \resumeProject{Ambassador Bridge Toll Operations System (Patron Management + Eris)}
+    {A dual-application system streamlining Ambassador Bridge toll operations: Patron Management (for vehicle owners) enables account registration, vehicle verification, digital wallet management, transaction tracking, and automated toll payments via geo-fencing, while Eris (for toll plaza staff) facilitates vehicle classification, ticket generation, multi-payment processing, real-time signboard integration, lane status management, and gate automation.}
+
+
   \resumeProject{Schoollet}
-  {Developed user and canteen apps for a client in Saudi Arabia using Flutter. Published live on the Play Store with full localization support for Arabic and English.}
+  {A digital financial management platform for students and parents, offering virtual wallets, QR-based cafeteria purchases, child account management, financial goal tracking, and incorporated Telr payment gateway, supported by staging and production dashboards and a branded web portal.}
+
+  \resumeProject{AlQaswa Hostel Management System (HMS + EMS)}
+    {A comprehensive cloud-based hostel management platform integrating student registration, digital enrollment, automated payment tracking, and a real-time expense management system (EMS) built on Firebase to categorize purchases, calculate monthly compensations, issue alerts, and provide owners with instant operational visibility and financial transparency.}
+
+
+  \resumeProject{ScentsAbility Games}
+  {A therapeutic mobile game suite including adaptive Match Games, Coloring Games and Jigsaw Puzzles, designed to support sensory rehabilitation therapy, achieving a 4.7/5 Play Store rating and engaging 15K+ active users.}
+
 \end{itemize}
 
-% Skills
-\section{Skills}
-\begin{multicols}{2}
-\begin{itemize}[leftmargin=*]
-  \resumeSkills{Languages}{Dart, Python, Java, Kotlin, JavaScript, SQL}
-  \resumeSkills{Mobile Development}{Flutter, Android Studio, REST APIs, Firebase, SQLite}
-  \resumeSkills{State Management}{BLoC, Provider, Riverpod}
-  \resumeSkills{Tools \& Technologies}{Docker, GCP, AWS, Selenium}
-  \resumeSkills{Architecture Patterns}{Clean Architecture, MVC, MVP, MVVM}
-  \resumeSkills{Localization}{i18n, RTL support, adaptive layouts}
-\end{itemize}
-\end{multicols}
+
+% Education
+\section{Education}
+\resumeSubheading {National University of Computer and Emerging Sciences}{Lahore, Pakistan}
+{Bachelor of Science in Computer Science} {2019-2023}
 
 \end{document}
